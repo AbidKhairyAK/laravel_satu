@@ -20,7 +20,7 @@
 		<tr>
 			<th>#</th>
 			<th>Title</th>
-			<th>Created at</th>
+			<th>Date</th>
 			<th>Option</th>
 		</tr>
 		<?php $no=1; ?>
@@ -28,7 +28,7 @@
 
 		<tr>
 			<td> {{$no++}} </td>
-			<td> {{$row->title}} </td>
+			<td> {{date('d M Y H:i',strtotime($row->created_at))}} </td>
 			<td> {{$row->created_at}} </td>
 			<td>
 				<a href="{{url('article/show/'.$row->id)}}">Detail</a> | 
